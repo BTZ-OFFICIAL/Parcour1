@@ -42,8 +42,8 @@ inventory.Secondary.Value = false;
 inventory.Melee.Value = false;
 inventory.Explosive.Value = false;
 inventory.Build.Value = false;
-Players.Get("E264DB3C324DED49").build.BuildRangeEnable.Value = true; 
-Players.Get("E264DB3C324DED49"). Damage.DamageIn.Value = false; 
+Players.Get("7CE37DE570BF7B0C").build.BuildRangeEnable.Value = true; 
+Players.Get("7CE37DE570BF7B0C"). Damage.DamageIn.Value = false; 
 // разрешаем одному игроку все режимы   
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);   
 Ui.GetContext().Hint.Value = player +"    КУ БРО";   
@@ -102,8 +102,7 @@ lolTrigger.Enable = true;
 });   
  }   
 });   
-// создание команд   
-Teams.OnPlayerChangeTeam.Add(function(player){ player.Spawns.Spawn()});
+
 // создаем команду
 const blueTeam = teams.create_team_blue();
 blueTeam.Spawns.RespawnTime.Value = 0;
