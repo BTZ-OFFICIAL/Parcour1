@@ -47,9 +47,9 @@ if (blue || !red && !blue) {
 	}
 }
 
-// ��������� ���� � ������� �� �������
+// по запросу на вход в команду - кидаем игрока в команду
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);});
-// ����� �� ����� � �������
+// если игрок сменил команду или выбрал ее, то происходит спавн игрока
 Teams.OnPlayerChangeTeam.Add(function(player){ player.Spawns.Spawn()});
 
 // ������ ���������
