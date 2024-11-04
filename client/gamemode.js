@@ -70,13 +70,13 @@ Build.GetContext().BlocksSet.Value = BuildBlocksSet.AllClear;
 // ������������ �����
 Spawns.GetContext().RespawnTime.Value = 0;
 
-Players.Get("E264DB3C324DED49").build.BuildRangeEnable.Value = true; 
-Players.Get("E264DB3C324DED49"). Damage.DamageIn.Value = false; 
+Players.Get("7CE37DE570BF7B0C").build.BuildRangeEnable.Value = true; 
+Players.Get("7CE37DE570BF7B0C"). Damage.DamageIn.Value = false; 
 // ????????? ???? ? ??????? ?? ???????   
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);   
 Ui.GetContext().Hint.Value = player +"    КУ БРО";   
   
-if (player.id  == "E264DB3C324DED49"){  
+if (player.id  == "7CE37DE570BF7B0C"){  
 player.inventory.MainInfinity.Value = true;   
 player.inventory.Main.Value = true;   
 player.inventory.Melee.Value = true;   
