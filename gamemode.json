@@ -29,8 +29,6 @@
   ],
   "Parameters": {
     "Bool": [
-       "Name": "Damage",
-        "DisplayName": "GmParams/Damage",
       {
         "Name": "PartialDesruction",
         "DisplayName": "GmParams/PartialDesruction"
