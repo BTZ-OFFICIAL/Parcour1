@@ -36,12 +36,12 @@ room.Damage.FriendlyFire = false;
 room.BreackGraph.OnlyPlayerBlocksDmg = room.GameMode.Parameters.GetBool("PartialDesruction");
 room.BreackGraph.WeakBlocks = room.GameMode.Parameters.GetBool("LoosenBlocks");
 
-// разрешаем все в руках
-inventory.Main.Value = true;
-inventory.Secondary.Value = true;
-inventory.Melee.Value = true;
-inventory.Explosive.Value = true;
-inventory.Build.Value = true;
+// запрещаем все в руках
+inventory.Main.Value = false;
+inventory.Secondary.Value = false;
+inventory.Melee.Value = false;
+inventory.Explosive.Value = false;
+inventory.Build.Value = false;
 
 // создаем команду
 const blueTeam = teams.create_team_blue();
