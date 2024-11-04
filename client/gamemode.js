@@ -45,7 +45,17 @@ inventory.Build.Value = false;
 
 // создаем команду
 const blueTeam = teams.create_team_blue();
-blueTeam.Spawns.RespawnTime.Value = 0;
+blueTeam.Spawns.RespawnTime.Value = 1;
+const redTeam = teams.create_team_red();
+redTeam.Spawns.RespawnTime.Value = 3;
+
+// разрешаем все в руках
+inventory.MainInfinity.Value = true;
+inventory.SecondaryInfinity.Value = true;
+inventory.Melee.Value = true;
+inventory.Explosive.Value = false;
+inventory.BuildInfinity.Value = true;
+
 
 // настройка голосования
 function OnVoteResult(v) {
