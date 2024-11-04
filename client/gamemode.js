@@ -5,14 +5,14 @@ import * as teams from './default_teams.js';
 
 // опции
 const END_OF_MATCH_TIME = 10;
-const VOTE_TIME = 20;
+const VOTE_TIME = 10;
 
 // константы
 const GameStateValue = "Game";
 const EndOfMatchStateValue = "EndOfMatch";
 const EndAreaTag = "parcourend"; 	// тэг зоны конца паркура
 const SpawnAreasTag = "spawn";	// тэг зон промежуточных спавнов
-const EndTriggerPoints = 1000;	// сколько дается очков за завершение маршрута
+const EndTriggerPoints = 1;	// сколько дается очков за завершение маршрута
 const CurSpawnPropName = "CurSpawn"; // свойство, отвечающее за индекс текущего спавна 0 - дефолтный спавн
 const ViewSpawnsParameterName = "ViewSpawns";	// параметр создания комнаты, отвечающий за визуализацию спавнов
 const ViewEndParameterName = "ViewEnd";	// параметр создания комнаты, отвечающий за визуализацию конца маршрута
@@ -53,7 +53,7 @@ redTeam.Spawns.RespawnTime.Value = 3;
 inventory.MainInfinity.Value = true;
 inventory.SecondaryInfinity.Value = true;
 inventory.Melee.Value = true;
-inventory.Explosive.Value = false;
+inventory.Explosive.Value = true;
 inventory.BuildInfinity.Value = true;
 
 
