@@ -1,7 +1,7 @@
 {
   "Name": "PARCOUR",
   "Description": "Паркур с точками сохранения. Кто первый прошел, тот и выиграл.",
-  "StartClientVersion": 533,
+  "StartClientVersion": 597,
   "MapFilter": {
     "HasParcourEnd": true
   },
