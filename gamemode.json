@@ -1,17 +1,35 @@
 {
-  "Name": "режим игра в кальмара паркур",
-  "Description": "от BTZYT",
-  "StartClientVersion": 597,
+  "Name": "PARCOUR",
+  "Description": "Паркур с точками сохранения. Кто первый прошел, тот и выиграл.",
+  "StartClientVersion": 533,
+  "MapFilter": {
+    "HasParcourEnd": true
+  },
   "MapLists": [
     {
-      "MapListId": 12773,
-      "Name": "squid game from BTZ"
+      "Name": "НОРМАЛЬНАЯ СЛОЖНОСТЬ",
+      "MapListId": 19045
+    },
+    {
+      "Name": "ЛЕГКО",
+      "MapListId": 19044
+    },
+    {
+      "Name": "СЛОЖНО",
+      "MapListId": 19046
+    },
+    {
+      "Name": "БЕЗУМНЫЕ",
+      "MapListId": 19085
+    },
+    {
+      "Name": "ВСЕ ОФ КАРТЫ ПАРКУРА",
+      "MapListId": 12773
     }
   ],
   "Parameters": {
     "Bool": [
-      {
-        "Name": "Damage",
+       "Name": "Damage",
         "DisplayName": "GmParams/Damage"
       },
       {
@@ -23,34 +41,18 @@
         "DisplayName": "GmParams/LoosenBlocks"
       },
       {
-        "Name": "RedTeam",
-        "DisplayName": "Teams/Red",
+        "Name": "ViewEnd",
+        "DisplayName": "GmParams/ViewEnd",
         "Default": true
       },
       {
-        "Name": "BlueTeam",
-        "DisplayName": "Teams/Blue",
+        "Name": "ViewSpawns",
+        "DisplayName": "GmParams/ViewSpawns",
         "Default": true
       },
       {
-        "Name": "BlueHasNothing",
-        "DisplayName": "GmParams/BlueHasNothing"
-      },
-      {
-        "Name": "FloodFill",
-        "DisplayName": "GmParams/FloodFill"
-      },
-      {
-        "Name": "FillQuad",
-        "DisplayName": "GmParams/FillQuad"
-      },
-      {
-        "Name": "RemoveQuad",
-        "DisplayName": "GmParams/RemoveQuad"
-      },
-      {
-        "Name": "Fly",
-        "DisplayName": "GmParams/Fly",
+        "Name": "MapRotation",
+        "DisplayName": "GmParams/MapRotation",
         "Default": true
       }
     ]
