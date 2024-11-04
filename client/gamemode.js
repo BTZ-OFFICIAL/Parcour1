@@ -36,7 +36,7 @@ room.Damage.FriendlyFire = false;
 room.BreackGraph.OnlyPlayerBlocksDmg = room.GameMode.Parameters.GetBool("PartialDesruction");
 room.BreackGraph.WeakBlocks = room.GameMode.Parameters.GetBool("LoosenBlocks");
 
-// запрещаем все в руках
+// разрешаем все в руках
 inventory.Main.Value = true;
 inventory.Secondary.Value = true;
 inventory.Melee.Value = true;
