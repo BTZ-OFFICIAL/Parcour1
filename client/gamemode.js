@@ -5,14 +5,14 @@ import * as teams from './default_teams.js';
 
 // опции
 const END_OF_MATCH_TIME = 10;
-const VOTE_TIME = 10;
+const VOTE_TIME = 20;
 
 // константы
 const GameStateValue = "Game";
 const EndOfMatchStateValue = "EndOfMatch";
 const EndAreaTag = "parcourend"; 	// тэг зоны конца паркура
 const SpawnAreasTag = "spawn";	// тэг зон промежуточных спавнов
-const EndTriggerPoints = 1;	// сколько дается очков за завершение маршрута
+const EndTriggerPoints = 1000;	// сколько дается очков за завершение маршрута
 const CurSpawnPropName = "CurSpawn"; // свойство, отвечающее за индекс текущего спавна 0 - дефолтный спавн
 const ViewSpawnsParameterName = "ViewSpawns";	// параметр создания комнаты, отвечающий за визуализацию спавнов
 const ViewEndParameterName = "ViewEnd";	// параметр создания комнаты, отвечающий за визуализацию конца маршрута
@@ -36,26 +36,16 @@ room.Damage.FriendlyFire = false;
 room.BreackGraph.OnlyPlayerBlocksDmg = room.GameMode.Parameters.GetBool("PartialDesruction");
 room.BreackGraph.WeakBlocks = room.GameMode.Parameters.GetBool("LoosenBlocks");
 
-// создаем команду
-const blueTeam = teams.create_team_blue();
-blueTeam.Spawns.RespawnTime.Value = 1;
-const redTeam = teams.create_team_red();
-redTeam.Spawns.RespawnTime.Value = 3;
-
-// set blue
-inventory.Main.Value = false;
-inventory.Secondary.Value = false;
-inventory.Melee.Value = false;
-inventory.Explosive.Value = false;
-inventory.Build.Value = false;
-
-// set red
-inventory.MainInfinity.Value = true;
-inventory.SecondaryInfinity.Value = true;
+// запрещаем все в руках
+inventory.Main.Value = true;
+inventory.Secondary.Value = true;
 inventory.Melee.Value = true;
 inventory.Explosive.Value = true;
-inventory.BuildInfinity.Value = true;
+inventory.Build.Value = true;
 
+// создаем команду
+const blueTeam = teams.create_team_blue();
+blueTeam.Spawns.RespawnTime.Value = 0;
 
 // настройка голосования
 function OnVoteResult(v) {
