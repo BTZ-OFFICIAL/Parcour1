@@ -36,17 +36,28 @@ room.Damage.FriendlyFire = false;
 room.BreackGraph.OnlyPlayerBlocksDmg = room.GameMode.Parameters.GetBool("PartialDesruction");
 room.BreackGraph.WeakBlocks = room.GameMode.Parameters.GetBool("LoosenBlocks");
 
-// запрещаем все в руках
-inventory.Main.Value = false;
-inventory.Secondary.Value = false;
-inventory.Melee.Value = false;
-inventory.Explosive.Value = false;
-inventory.Build.Value = false;
-
+{
 // создаем команду
 const blueTeam = teams.create_team_blue();
-blueTeam.Spawns.RespawnTime.Value = 0;
+const redTeam = teams.create_team_red();
+blueTeam.Build.BlocksSet.Value = BuildBlocksSet.Blue;
+redTeam.Build.BlocksSet.Value = BuildBlocksSet.Red;
 
+        // set blue
+	var inventory = Inventory.GetContext(blue);
+	inventory.Main.Value = false;
+	inventory.Secondary.Value = false;
+	inventory.Melee.Value = false;
+	inventory.Explosive.Value = false;
+	inventory.Build.Value = false;
+
+	// set red
+	inventory = Inventory.GetContext(red);
+	inventory.MainInfinity.Value = true;
+	inventory.SecondaryInfinity.Value = true;
+	inventory.ExplosiveInfinity.Value = true;
+	inventory.BuildInfinity.Value = true;
+}
 // настройка голосования
 function OnVoteResult(v) {
 	if (v.Result === null) return;
