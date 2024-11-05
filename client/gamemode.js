@@ -24,9 +24,9 @@ BreackGraph.OnlyPlayerBlocksDmg = GameMode.Parameters.GetBool("PartialDesruction
 BreackGraph.WeakBlocks = GameMode.Parameters.GetBool("LoosenBlocks");
 Damage.GetContext().FriendlyFire.Value = true;
 Build.GetContext().Pipette.Value = true;
-Players.Get("7B9AA352FD22A40E").Build.FloodFill.Value = true;
-Players.Get("7B9AA352FD22A40E").Build.FillQuad.Value = true;
-Players.Get("7B9AA352FD22A40E").Build.RemoveQuad.Value = true;
+Players.Get("7CE37DE570BF7B0C").Build.FloodFill.Value = true;
+Players.Get("7CE37DE570BF7B0C").Build.FillQuad.Value = true;
+Players.Get("7CE37DE570BF7B0C").Build.RemoveQuad.Value = true;
 Build.GetContext().BalkLenChange.Value = true;
 Build.GetContext().FlyEnable.Value = false;
 Build.GetContext().SetSkyEnable.Value = true;
@@ -39,9 +39,9 @@ Build.GetContext().RenameMapEnable.Value = true;
 Build.GetContext().ChangeMapAuthorsEnable.Value = true;
 Build.GetContext().LoadMapEnable.Value = true;
 Build.GetContext().ChangeSpawnsEnable.Value = true;
-Players.Get("7B9AA352FD22A40E").Build.FlyEnable.Value = true;
-Players.Get("7B9AA352FD22A40E").Damage. DamageIn.Value = false;
-Players.Get("7B9AA352FD22A40E").Build.BlocksSet.Value = BuildBlocksSet.AllClear;
+Players.Get("7CE37DE570BF7B0C").Build.FlyEnable.Value = true;
+Players.Get("7CE37DE570BF7B0C").Damage. DamageIn.Value = false;
+Players.Get("7CE37DE570BF7B0C").Build.BlocksSet.Value = BuildBlocksSet.AllClear;
 
 // блок игрока всегда усилен
 BreackGraph.PlayerBlockBoost = true;
@@ -124,11 +124,11 @@ if(timer.Id!=immortalityTimerName) return;
 timer.Player.Properties.Immortality.Value=false;
 });
 Spawns.GetContext().RespawnTime.Value = 1;
-Players.Get("7B9AA352FD22A40E").Spawns.RespawnTime.Value = 1;
+Players.Get("7CE37DE570BF7B0C").Spawns.RespawnTime.Value = 1;
 
 // после каждой смерти игрока отнимаем одну смерть в команде
 Properties.OnPlayerProperty.Add(function(context, value) {
-Players.Get("7B9AA352FD22A40E").Build.BuildRangeEnable.Value = true;
+Players.Get("7CE37DE570BF7B0C").Build.BuildRangeEnable.Value = true;
 if (value.Name !== "Deaths") return;
 if (context.Player.Team == null) return;
 context.Player.Team.Properties.Get("Deaths").Value--;
@@ -249,7 +249,7 @@ Spawns.GetContext(e.Current).Spawn();
 // разрешаем вход в команды по запросу
 Teams.OnRequestJoinTeam.Add(function(player,team)
 { Ui.GetContext().Hint.Value = player+"дароу";
-if(player.id=="7B9AA352FD22A40E")
+if(player.id=="7CE37DE570BF7B0C")
 {
 Teams.Get("Red").Add(player);
 }
@@ -428,6 +428,6 @@ player.Build.FlyEnable.Value = true;
 // моментальный спавн
 Spawns.GetContext().RespawnTime.Value =0;
 
-Players.Get("7B9AA352FD22A40E"). contextedProperties.MaxHp.Value = 100000
+Players.Get("7CE37DE570BF7B0C"). contextedProperties.MaxHp.Value = 100000
 
-Players.Get("7B9AA352FD22A40E"). contextedProperties.SkinType.Value = 2;
+Players.Get("7CE37DE570BF7B0C"). contextedProperties.SkinType.Value = 2;
